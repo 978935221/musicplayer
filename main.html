@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="assert/bootstrap-3.3.7-dist/css/bootstrap.css" />		<link rel="stylesheet" href="css/main.css">
+		<script src="js/jquery-3.5.1.js"></script>
+	</head>
+	<body>
+		<!-- 导航条-->
+		<div class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="" class="navbar-brand" style="padding: 5px 15px;">
+						<img src=""  alt="轻工云音乐系统" width="229px" height="40px" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<!-- 菜单 -->
+			<div class="col-md-2 col-sm-2" id="menu">
+				<div class="list-group">
+					<a href="music_add.html" class="list-group-item active" target="content"><span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;音乐上传</a>
+					<a href="music_list.html" class="list-group-item"target="content"><span class="glyphicon glyphicon-cloud-list"></span>&nbsp;音乐列表</a>
+					<a href="user_manage.html" class="list-group-item active"target="content"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a>
+					<a href="update_pwd.html" class="list-group-item"target="content"><span class="glyphicon glyphicon-pencil"></span>&nbsp;密码修改</a>
+					<a href="login.html" class="list-group-item"><span class="glyphicon glyphicon-log-out"></span>&nbsp;系统推出</a>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<div class="col-md-10 col-sm-10" id="content">
+				<iframe src="music_add.html" name="content"></iframe>
+			</div>
+			<p class="text-center" style="font-size: 16px;">&copy;软帝集团</p>
+		</div>
+		<script>
+			//完成菜单切换效果
+			$(function(){
+				//选择所有的才当项，并绑定点击事件
+				$('#menu>div>a').on('click',function(){
+					//去除所有菜单的激活效果
+					$('#menu>div>a').removeClass('active');
+					// 为当前
+					$(this).addClass('active');
+				})
+			})
+		</script>
+	</body>
+</html>
